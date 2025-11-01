@@ -1,0 +1,37 @@
+h1 {
+  width: 1167px;
+  height: 41px;
+  margin-top: 33px;
+  margin-left: 41px;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+input {
+  width: 1408px;
+  height: 50px;
+  opacity: 1;
+  border: 3px solid #000000;
+  font-size: 20px;
+  border-radius: 10px;
+  color: black;
+  margin-top: 33px;
+  margin-left: 41px;
+}
+
+button {
+  width: 303px;
+  height: 67px;
+  margin-top: 11px;
+  margin-left: 41px;
+  border-radius: 10px;
+  opacity: 1;
+  outline: none;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+}
