@@ -19,7 +19,7 @@ input {
   font-size: 20px;
   border-radius: 10px;
   color: black;
-  margin-top: 33px;
+  margin-top: 20px;
   margin-left: 41px;
 }
 
@@ -34,4 +34,25 @@ button {
   background-color: black;
   color: white;
   font-size: 25px;
+}
+.office-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 41px;
+}
+
+.office-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.office-card h3 {
+  margin-top: 0;
+}
+h2,
+b {
+  margin-left: 41px;
 }

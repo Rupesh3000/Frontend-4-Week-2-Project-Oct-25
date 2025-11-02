@@ -7,6 +7,7 @@ const App = () => {
   const [userInput, setUserInput] = useState("");
   const [pincodeData, setPincodeData] = useState(null);
   const [error, setError] = useState("");
+  const [numberOfMeassage, setNumberOfMessage] = useState("");
 
   const fetchPincodeData = async () => {
     if (6 !== userInput.length) {
@@ -27,6 +28,7 @@ const App = () => {
       if (data[0].Status === "Error") {
         setError(data[0].Message || "Pincode not found");
       } else if (data[0].PostOffice) {
+        setNumberOfMessage(data[0].Message);
         setPincodeData(data[0].PostOffice);
       }
     } catch (err) {
@@ -35,7 +37,7 @@ const App = () => {
       setLoading(false);
     }
   };
-  console.log(pincodeData)
+  console.log(pincodeData);
   return (
     <div>
       {/* Show input only when no data and not loading */}
@@ -52,7 +54,13 @@ const App = () => {
       {loading && <p>Loading...</p>}
 
       {/* Show data when available */}
-      {pincodeData && <DisplayData data={pincodeData} />}
+      {pincodeData && (
+        <DisplayData
+          data={pincodeData}
+          userInput={userInput}
+          numberOfMeassage={numberOfMeassage}
+        />
+      )}
 
       {/* Show error */}
       {error && <p className="error">{error}</p>}
